@@ -1,0 +1,3 @@
+					#Declaração
+my %nucleotideos = ();
+
