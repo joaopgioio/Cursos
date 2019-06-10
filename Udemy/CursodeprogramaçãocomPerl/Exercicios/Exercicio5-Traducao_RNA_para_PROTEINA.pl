@@ -11,6 +11,12 @@
 # Saída:
 # MAMAPRTEINSTRING
 
+my $arquivo_rna = "rna.fasta";
+my $tamanho = 0;
+my $codons = "";
+
+open(my $rna, "<", $arquivo_rna) or die "Nao foi possivel abrir o arquivo $arquivo_rna";
+
 my %codons = (
 	'UCA' => 'S', 'UCC' => 'S', 'UCG' => 'S', 'UCU' => 'S', 'AGC' => 'S', 'AGU' => 'S', # Serina
 	'UUC' => 'F', 'UUU' => 'F', # Fenilalanina
@@ -35,3 +41,16 @@ my %codons = (
 	'GAA' => 'E', 'GAG' => 'E', # Glutamato
 	'GGA' => 'G', 'GGC' => 'G', 'GGG' => 'G', 'GGU' => 'G'  # Glicina
 );
+
+foreach my $linha(<$rna>){
+
+	if(substr($linha,0, 1) ne ">"){
+		for (my $i = 0; $i < length($linha);$i = $i + 3){
+			$codons = %codons ;
+			print($codons);
+
+		}
+	}
+}
+
+close($rna);
