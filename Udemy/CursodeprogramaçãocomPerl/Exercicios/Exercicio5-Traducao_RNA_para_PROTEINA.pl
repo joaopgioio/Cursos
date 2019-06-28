@@ -12,8 +12,8 @@
 # MAMAPRTEINSTRING
 
 my $arquivo_rna = "rna.fasta";
-my $tamanho = 0;
-my $codons = "";
+#my $tamanho = 0;
+my $codon = "";
 
 open(my $rna, "<", $arquivo_rna) or die "Nao foi possivel abrir o arquivo $arquivo_rna";
 
@@ -46,9 +46,16 @@ foreach my $linha(<$rna>){
 
 	if(substr($linha,0, 1) ne ">"){
 		for (my $i = 0; $i < length($linha);$i = $i + 3){
-			$codons = %codons ;
-			print($codons);
 
+			$codon = substr($linha,$i, 3);
+				if($codons{$codon} ne 'stop'){
+				print($codons{$codon});
+				}else{
+					last;
+				}
+		}
+		if($codons{$codon} ne 'stop'){
+			print(' Aviso: Tradução não terminou com um stop codon!');
 		}
 	}
 }
