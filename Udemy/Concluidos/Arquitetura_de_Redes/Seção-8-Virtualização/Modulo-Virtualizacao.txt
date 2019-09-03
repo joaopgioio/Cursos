@@ -1,0 +1,38 @@
+					Curso de Arquitetura de Redes 
+					
+		1 - Introdução à virtualização
+			O que é virtualização? R - É simular ou emular um recurso. O objetivo da virtualização é a redução de recursos, pois reduz a quantidade de equipametno físico na rede e também a manutenção desses equipamentos.
+		
+		2 - Virtualização de máquinas
+			
+			Hardware - > SO -> Software Hypervisor(VMWare, VirtualBox, etc) -> SO e programas
+			Desvantagens de Criar maquinas Virtuais: 
+				1 - Desempenho: Todas as maquinas virtuais que estiverem rodando vao consumir recursos da máquina real concorrendo entre si e fazendo com que diminua os recursos uma das outras.
+			Vantagens: 
+				1 - Desempenho: Caso tenhamos 3 maquinas fisicas, trabalhando com sua capacidade maxima cada umaa 30%, virtualizando as mesmas fazendo como se fossem uma só maquina física e depois criando em si 3 maquinas virtuais cada uma rodando o que rodavam nas maquinas fisicas elas utilizarão o recurso das 3 maquinas ao mesmo tempo fazedno com que aumente seu processamento. Também teráeconomia na manutenção dessas máquinas uma vez que seráfeita em uma máquina somente já que esta sendo vitualizada em uma. Consumo de energia, de ar condicionado etc.
+				Pode ser utilizada ao invez de 3 maquinas fisicas usar uma somente parruda e criar dentro dela 3 maquinas virtuais. Também pode ser feito cluster.
+				Tambbém como vantagem, para mudar a maquina virtual de maquina fisica, copiamos o arquivo gerado no virtual box ou similar e colamos para a maaquina fisica que queremos.
+		
+		3 - Virtualização de redes: interna
+				Pegar uma maquina e simular uma rede, não somente isso mas também o trafico, equipamentos de rede. Essa rede só funcionará dentro dessa máquina.
+				Existem duas utilidades básicas para esse tipo de virtualização:
+					1 - Virtualização de máquinas ou servidores: Se Criarmos 2 maquinas virtuais dentro de uma maquina fisica e tentarmos nos comunicar com a internet, qunado enviamos dados para a rede, a maquina virtual fala com o virtual box por exemplo e que por sua vez fala com o hardware nas portas, esse por sua vez fala com o roteador e verifica se é pacote interno ou externo, caso seja interno ele faz o caminho inverso e envia para o dispositivo de destino. Caso seja o pacote para a rede interna, a virtualizacao interna facilita uma vez que o pacote do dispositivo de origem sai passa pelo virtualbox que tem uma configuração de roteador fazendo então o roteamente identificandoque o pacote é para um dispositivo interno, fazendo com que não desperdisse recurso pois desse jeito opacote não precisa sair para a rede(roteador)para depois voltar.
+					2 - Quando o profissional precisa criar uma rede fisica, ele antes simula virtualmente inserindo todos os nos da rede que funcionara exatamente como se fosse fisico e assim verifica todos os possiveis problemas de uma rede real.
+	
+	 Existem duas tecnicas básicas para fazer virtualização externa:
+		4 - Virtualização de redes: SDN/VLAN
+				Primeira tecnica de Virtualização externa.
+					SDN(Software Defined Network)= VLAN(Virtual Local Area Network): Em um datacenter onde estão ligados varios dispositivos da rede, e precisamos criar uma outra rede para um determinado projeto, para isso precisariamos comprar um switch, pois não podemos ligar um switch em varias redes diferentes esse é o papel do roteador, porem temos um switch de 24 portas e somente10 estão sendo utilizades, nesse caso se o swithc suportar configuracao SDN podemos configurar esse switch dividindo em 2 switchs de 12portas cada criando duas redes em um mesmo swhitch com a vlan1 e vlan2. Fisicamente temos somente um switch porem logicamente temos 2. Nesse caso houve uma economia, pois nãpo recisamos comprar outro switch para a conficuração da Rede.
+				
+		
+		5 - Virtualização de redes: NFV
+				Segunda tecnica de Virtualização externa. 
+					NFV(Network Function Virtualization): Temos uma equipamento e não definimos por configuração do software a funcção que a máquina terá, se será um roteador, um firewall etc. Será definido via software não mais hardware.
+		
+		6 - Virtualização de desktop
+				Tem um desktop na mesa e quando vc liga, faz o login, aparece os dados que não estão em sua maquina fisica, estão em outro servidor e estã somente acessando remotamente esse servidor. Caso voce vá ate um cliente usando um notebook não precisa copiar os dados que teoricamente estaria em seu pc, é somente fazer o login que acessa o servidor que é seu computador virtualizado. A vantagem é que se seu computador físico der algum problema voce simplesmente troca de computador e acessa o servidor onde seus dados estão armazenados(seu comutador virtual).
+		
+			
+		7 - Virtualização de armazenamento
+				Armazenamento em nuvem: O usuario não precisa se preocupar onde seus dados estao armazenados e pouco importa. O que importa é que conseguirar recuperar os dados, gravar e etc. Se fisicamente ou virtualmente não importa ao usuario.
+			

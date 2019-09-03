@@ -1,0 +1,24 @@
+					Curso de Arquitetura de Redes 
+					
+					
+		Hubs e repetidores
+			Hubs são equipamentos concentradores para formar topologia física estrela. Opera na camada 1 e por isso nao tem nenhum tipo de processamento sendo somente um repetidor. Esse tipo de equipamento gera problema de desempenho uma vez que os quadros são enviados para todos os computadores pelo Hub quando um tenta se comunicar e segurança, pois como é enviado para todos os computadores da rede os quadros podendo então ser configurado um computador para tentar ler os dados que estão sendo trafegados. Além do hub temos um repetidor que também trabalha na camada 1 do modelo OSi, os repetidores serviam para estender a rede, uma vez que o cabo tem um limite, então era colocados os repetidores para estabilizarem o sinal e assim trafegar por longas distancias.
+			
+		
+		Switches e pontes
+			Switches são equipamentos concentradores para formar uma topologia em estrela tanto física quanto lógica,Opera na camada 2 do modelo OSI camada de link de dados analisando os quadros que são trafegados na rede como ele pode fazer analise de quadros podendo ler os campos de endereçamento de origem e destino. O switch ao ser ligado não conhece que computador está conectado em tal porta, ele precisa aprender e para ele aprender assim algum computador envia dados tentando se comunicar com um outro computador, o switch manda um broadcast(envia para todos) e assim quando o computador que recebeu os dados for o de destino ele responde que é ele e assim o switch vai aprendendo quem esta conectado. A vantagem dos switches é a questão de se poder configurar vlans(redes virtuais), pode pode se escolher as portas por exemplo um switch que tem 24 portas, configuramos 12 portas para uma vlan e outras 12 para outrs vlan, onde as vlnas são redes virtuais e nesse caso mesmo estando no mesmo switch elas não se conhecem.
+			Outros equipamentos que trbalham na camada 2 são a pontes(bridge) que são equipamentos que ligam redes, onde quando uma rede enviar um quadro, a ponte analisa se esse quadro pertence ao primeiro segmento ou ao segundo seguimento, caso pertença ao segundo ela encaminha parao segundo mas caso não seja do segundo ela isola o segundo mandando somente para o primeiro fazendo com com que o segundo nao receba frame que não éseu evitando então colisões e aumentando seu desempenho.
+		
+		Roteadores e switches camada três
+			O papel do roteador é conectar duas redes diferentes trabalha na camada 3 do modelo OSI e com isso ele consegue analisar o que tem dentro dessa camada que vai ser o endereçamento lógico presente no pacote de dados os roteadores consequem ler os campos de endereçamento lógico IP. O roteador analisa se os dados que estão sendo transmitidos, são para a rede externa e ou interna, caso seja para a rede interna ele envia internamente e caso seja para a rede externa ele envia isso acontece quando alguem quer se comunicar na sua rede interna vindo externamente, o roteador analisa e envia os dados. O switch de camada tres opera de maneira similar ao roteador, a diferença é que ele não faz conexão com uma rede externa. Ele faz uma conexão com redes internas. A vantqagem do switch de camada tres é que criando vlans no switch, essas redes podem se falar pois ele trabalha como um roteador diferente dos da camada 2.
+			
+		
+		Pontos de Acesso Sem Fio
+			O ponto de acesso é um equipametno que faz uma interface em uma rede cabeada com uma rede sem fio pode operar de formas diferentes. Pode operar no modo repetidor onde elepode espandir o alcance da rede. Também pode trabalhar no mode ponte servindo para fazer uma conexão entre duas redes com fio usando uma conexão sem fio entre elas mas nao permitindo que outros computadores se conectam a essa conexao sem fio.
+			
+		Roteadores de Banda larga 
+			Roteador domestico, éo equipamento que temos em casa para acessarmos a internet, esse equipamento na verdade éa junção de varios em um, sendo que são roteadores, switches, ponto de acesso e conexão sem fio tudo em um só equipamento. Existem provedores de acesso entregam tudo isso e mais o modem em um único equipamento.
+			
+		Balanceador de Carga
+			Ele serve para dividir trafego em mais de um serviço ou servidor.
+			
