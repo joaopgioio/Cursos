@@ -1,0 +1,50 @@
+					Curso de Arquitetura de Redes
+					
+		Segurança - Introdução
+			Seguranca tem mais a ver com comportamento do que qualquer outra coisa. Por exemplo criarem uma senha 1234.
+				
+		Engenharia social
+			É a tecnica de se conseguir informações se passando por outra pessoa. Por exemplo Ligar para uma central de atendimento se passando por outra pesoa para conseguir uma informação. 
+			Como adm de redes temos que ficar ligados pois por exemplo uma pessoa que tentou acessar uma conta e nao conseguiu dpeois tenta recuperar a senha mas tem um email desatualizado e envia uma solicitacao de recuperacao, deve analisar se é a pessoa legitima ou se trata de uma pessoa que esta se passando por outra,nesse caso uma das coisas que ajudam bastante é o de desafios quando se cadastra um usuario fazer perguntas que somente ele pode responder, do tipo qual seu primeiro animal de estimacao, nome de solteiro da mae. Precisa tomar cuidado com que se posta em rede sociais pois pode ser facilmente buscado dados que podem descobrir a senha. Em casos extremos sao buscadas, resgatadno a lixeira não somente do pc mas física.
+				
+		Como ataques acontecem
+			Os casos mais simples é o de outra pessoa saber o login e a senha, nesse caso nao adianta ter firewal, proxy, etc, pois a pessoa foi autenticada. Precisa colocar niveis dificeis de senhas para nao serem facilmente descobertas.
+			Exploracao de vulnerabilidade: Caso a pessoa conheca a arquitetura(estrutura) da rede ou explocar essa estrutura em busca de alguma vulnerabilidade, por exemplo uma empresa descobre uma falha de segurança em seu sistema web e arruma o bug postando e voce como adm de rede precisa estar antenado para que rapidamente corrija para que nãoseja utilizado esse bug como vulnerabilidade.
+			Ataque de negação de serviço(DoS): Quando voce manda mais requisição doq o sistema aguenta, então ele rejeita novas conexoes, e fica lentro ou ate fica fora do ar.
+			Ataque de negação de serviço distribuido(DDoS): Quando voce envia varias requisições e fazendo ataques e tem um firewall e bloqueio o endereco de ip se fazendo conhecido, mas quando é distribuido, isso éele usa varias maquinas ao redor do mundo fazndo com que os ips sejam diferentes no ataque.
+		
+		Segurança por obscuridade
+			É um conceito onde o adm da rede, dono do servidor etc não tem um conhecimento tecnico muito aprofundado para implementar um sistema de segurança que ele cria um sistema cpmplicado para acessar os dados que ele acha que ninguem vai fazer engenharia reversa e descobrir. um exepllo disso é u,ma pessoa guardar um arquivo num sistema e ao inves de criar seguranca criando acessos de credenciais, o cara cria o arquivo com nome embaralhado achando que ninguem vai descobrir. De modo nenhum esse tipo de seguranca deve ser usada.
+		
+		Senhas
+		    O jeito mais facil de se ter acesso a uma informação é sabendo usuario e a senha é a maneira mais comum de invasao ou acesso nao autorizado. O administrador de redes deve ter em mente que precisa criar um padrao de criacao de uso de senha que não use uma plavra do dicionario pois usando um programa de forca bruta usando as palavras do dicionario sera questao de tempo encontrar a senha, nao deixar que seja senha com poucos caracteres, pois quanto menos caracter tiver mais rapido um sistema de forca bruta sera capaz de descobrir.
+			Deve ser usada uma senha e se possivel emails diferentes para cada site que vc se cadastra, pois caso descobirem a senha de seu email ele pode verificar seus sites de compras e pedir recuperacao de senha e assim comprar usando seus dados.
+			O mais importante par aum adm de rede é nao deixar que as senhas sejam armazenadas como Plaintext(texto puro), digamos que a pessoa que estiver fazendo o ataque consiga acesar o banco de dados de um site de compras e consiga verificar a senha se a mesma estiver em texto puro ele consegue acessar qualquer conta visto que não há nenhuma criptografia na senha, porém não adianta a senha esta criptografada visto que a precisa de uma chave para dicriptografar, caso quem estiver fazendo o ataque tiver a chave de discriptografia não adianta nada esse tipo de segurança. A forma que é feita a criptografia é a seguinte é através de um checksum chamado hash(algoritmo de soma de verificação), quando se cadastra a senha, gera um valor de chegksum que é gravado no bando de dados, quando o usuario quiser acessar sua conta, ele insere a senha que é feita uma verificação do checksum digitado pelo usuario com o checksum cadastrado na base se os dois forem iguais entao autentica o usuario, porem se não forem iguais quer dizer que a senha digitada é incorreta.
+			Caso seja um programador não se deve usar na senhas os algoritmos MD5 e SHA1, pois eles são frágeis e conseguem descobrir por se tratar de uma quantidade de bits pequenas e épossivel gerar outras senhas que deem o mesmo número do hash e para acessar o sistema basta vc digitar uma sequencia de caracters que deem o mesmo valor de hash.
+			Um jeito de descobrir se a senha é criptrografada usando hash ou texto puro, é quando voce pede para recuperar a senha em algum site e recebe um email com a senha, isso significa que não foi criptrografada esssa senha e existe ai tambem outra falha de seguranca visto que se alguem tiver acesso ao seu email ou capturar o pacote vera a sua senha. Um jeto de saber que ela esta criptografada é quando ao inves de receber a senha em texto puro vc recebe um link especial para a recuperacao da senha, porem não ha como ter como 100% de certeza, mas já é um indicio de uma pequena seguranca.
+				
+		Criptografia
+			Chave publica: Criptografa os dados e pode ser enviada por canal não seguro.
+			Chave privada: Descriptografa os dados é secreta, nenhum outro dispositivo pode ter acesso.
+		
+			Serve para embaralhar os dados de modo que alguem tendo acesso a eles não saberão o que está escrito ali. existem vários algoritmos que fazem esse embaralhamento das informações. Existem dois tipos de forma de criptografia:
+				Criptografia Simetrica: Onde ao enviar os dados criptografados, o receptor precisa de ter a mesma chave ou parecida para que consiga interpretar os dados e precisa ser enviada essa chave e caso isso ocorra em um canal não seguro esse pacote pode ser interceptado e os dados descriptografados atraves de ataque. Esse modo nãoé muito usado.
+				Criptografia Assimetrica: Onde as chaves de criptografar e descriptografar são diferentes, quando preciso mandar um arquivo ou dado criptografado eu envio com uma chave publica onde todos tem acesso a essa chave que é fornecida pelo receptor, para desembaralhar os dados somente com uma chave privada que é exclusiva do receptor que ninguem tem acesso se for fazer outra vez porem o receptor faz a criptografia , sera usada a cheve publica do primeiro transmissor partindo do mesmo principio que o recptor tem a chave publica que ésua exclusiva.
+				
+		Senha vs Chave
+			Diferença:
+				Senha: previne acesso isso não significa que os dados ou a comunicação estejam criptografados 
+				Chave: quando falamos de chave, estamosfalando da publica onde estamos criptografando os dados antes de serem enviados. Qaundo falamos de senha de wifi na verdade não é senha e sim chave pois tudo que é trafegado no wifi usando a criptografia será criptografado.
+			Quando voce tenta acessar uma rede que não tem nenhum tipo de senha de acesso para se logar(senha da rede, roteador), mas vc precisa fazer um login em um determinado site para ter acesso a rede, os dados ali trafegados não serão criptografados salvo os sites que utilizam o protocolo https ai nesse caso toda a comunicacao entre o site e vc, vc e o site serão criptografados.
+		
+		Autenticação de dois passos
+			Esse tipo de autenticação aumenta bastante o nivel de segurança uma vez que voce precisa se logar no sistema, assim se loga vc precisara de um tipo de token(recebido atraves de um aparelho) esse token é gerado de tempos em tempos no sistema e no aparelho e caso a pessoa tenha conseguido acessar sua conta não conseguirá se autenticar de verdade sem ter o token.
+		
+		Segurança Física
+			Precisa ter muito atenção a parte fisica dos equipamentos, pois por exemplo o sistema da empresa é de ultima geração no sentido de segurança obrigadno os usuarios a criarem senhas que nunca eles usaram e eles criam essas senhas, porem deixam as mesmas expostas em seu localde trabalho, no monitor , debaixo do teclahdo etc. ou se tem alguem visitando a empresa e pede para ir ao banehiro ou esta passando e acaba anotando a senha. Tambem sala de equipamentos se estiverem abertas a pessoa facilmente poderia se conectar ou pegar dados privilegiados, tambem tendo acesso a cabos de redes podem facilmente capiturar frames se conectando atraves de cabos ou portas livres.
+		
+		Firewall
+			É um sistema de filtragem de pacotes com duas portas onde é verificado se os dados podem trafegar ali ou nao, se o acesso for legitimo ou parecer legitimo ele deixa passar. Bloquear portas TCP que não estão sendo usadas.
+			
+				
+			
