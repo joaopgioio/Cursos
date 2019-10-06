@@ -1,7 +1,0 @@
-				Automação de Testes com Robot Framework - Básico de WEB+API
-				
-		Introdução
-			O que é Robot Framework
-				è um framework para testes automatizados desenvolvido em python. Estruturado para desenvonvimento dirigido a testes de aceitacao(ATDD). Desenvolvido para projetos ageis onde ao final do projeto teremos uma documentacao executavel. Baseado em keyword-driven, isso é será escrito testes em auto nível(sem se preocupar com linguagem de programação). Generico, possibilitando testes em qualquer sistema desde que tenha libraries em que suporte seu sistema. Hoje ja existem diversas wapps para testar, selenium para usar o robot para testar web, a RequestKey para usar o robot para testar API, o appium para testar mobile, a sicule para poder testar Desktop.
-				
-		Demos de testes com o RobotFRamework
