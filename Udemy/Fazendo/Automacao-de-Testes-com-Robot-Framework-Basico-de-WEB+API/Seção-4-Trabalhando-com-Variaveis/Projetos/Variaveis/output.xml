@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191024 19:25:35.999" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Projetos\Variaveis\ExemplosArgumentos.robot" id="s1" name="ExemplosArgumentos">
+<test id="s1-t1" name="Caso de teste de exemplo 01">
+<kw name="Uma keyword qualquer 01">
+<kw name="Uma subkeyword com argumentos">
+<arguments>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.email}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Nome Usuário: ${NOME_USUARIO}</arg>
+</arguments>
+<msg timestamp="20191024 19:25:36.075" level="INFO">Nome Usuário: João Paulo</msg>
+<status status="PASS" endtime="20191024 19:25:36.075" starttime="20191024 19:25:36.075"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Email: ${EMAIL_USUARIO}</arg>
+</arguments>
+<msg timestamp="20191024 19:25:36.076" level="INFO">Email: joaopgioio@gmail.com</msg>
+<status status="PASS" endtime="20191024 19:25:36.076" starttime="20191024 19:25:36.075"></status>
+</kw>
+<status status="PASS" endtime="20191024 19:25:36.076" starttime="20191024 19:25:36.074"></status>
+</kw>
+<kw name="Uma subkeyword com retorno">
+<arguments>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.idade}</arg>
+</arguments>
+<assign>
+<var>${MENSAGEM_ALERTA}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>${IDADE_USUARIO}&lt;18</arg>
+<arg>Não autorizado! O usuário ${NOME_USUARIO} é menor de idade!</arg>
+</arguments>
+<assign>
+<var>${MENSAGEM}</var>
+</assign>
+<msg timestamp="20191024 19:25:36.077" level="INFO">${MENSAGEM} = Não autorizado! O usuário João Paulo é menor de idade!</msg>
+<status status="PASS" endtime="20191024 19:25:36.077" starttime="20191024 19:25:36.076"></status>
+</kw>
+<msg timestamp="20191024 19:25:36.077" level="INFO">${MENSAGEM_ALERTA} = Não autorizado! O usuário João Paulo é menor de idade!</msg>
+<status status="PASS" endtime="20191024 19:25:36.077" starttime="20191024 19:25:36.076"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MENSAGEM_ALERTA}</arg>
+</arguments>
+<msg timestamp="20191024 19:25:36.078" level="INFO">Não autorizado! O usuário João Paulo é menor de idade!</msg>
+<status status="PASS" endtime="20191024 19:25:36.078" starttime="20191024 19:25:36.078"></status>
+</kw>
+<status status="PASS" endtime="20191024 19:25:36.078" starttime="20191024 19:25:36.074"></status>
+</kw>
+<status status="PASS" endtime="20191024 19:25:36.078" critical="yes" starttime="20191024 19:25:36.073"></status>
+</test>
+<doc>Exemplo de uso de variáveis em argumentos na keywords</doc>
+<status status="PASS" endtime="20191024 19:25:36.080" starttime="20191024 19:25:36.010"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="ExemplosArgumentos" pass="1">ExemplosArgumentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
