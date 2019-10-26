@@ -1,0 +1,15 @@
+início {
+    inteiro: A;
+    inteiro: P;
+    inteiro: l;
+    
+    leia("Digite o tamanho dos lados do hexagono ", l);
+    escreva("O tamanho dos lados do hexagono é ", l);
+    escreva("O tamanho do lado do perimetro do hexagono é ", l);
+    A = 3 * (pot(l, 2)) * rad(3)/2; 
+    P = 6 * l;
+    
+    escreva("o valor da area do hexagono é ", A);
+    escreva("o valor do perimetro do hexagono é ", P);
+    
+}

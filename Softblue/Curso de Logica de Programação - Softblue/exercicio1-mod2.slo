@@ -1,0 +1,11 @@
+início {
+    inteiro: n1;
+    inteiro: n2;
+    inteiro: n3;
+    
+    n1 = 20;
+    n2 = 30;
+    n3 = 10;
+    
+    escreva("O valor de n1 é "+n1+ " O valor de n2 é " +n2+ " O valor de n3 ", n3);
+}

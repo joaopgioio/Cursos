@@ -1,0 +1,45 @@
+início {
+    inteiro: a;
+    inteiro: b;
+    inteiro: c;
+    inteiro: xlinha;
+    inteiro: x2linhas;
+    inteiro: bquadrado;
+    inteiro: raiz;
+    inteiro: equacaoxlinha;
+    inteiro: equacaox2linhas;
+    
+    
+    leia("Digite o numero a", a);
+    escreva("Este é o numero a ", a);
+    leia("Digite o numero b", b);
+    escreva("Este é o numero b ", b);
+    leia("Digite o numero c", c);
+    escreva("Este é o numero c ", c);
+    
+    
+    bquadrado = b * b;
+    raiz = rad(bquadrado - 4 * a * c);
+    
+    se (raiz <= 0){
+        escreva("não existe raiz negativa");
+    }senão{
+        xlinha = (-b + raiz)/ (2*a);
+        x2linhas = (-b - raiz)/ (2*a);
+        
+        escreva("Esse é o valor de xlinha ",xlinha);
+        escreva("Esse é o valor de x2linhas ",x2linhas);
+    }
+    equacaoxlinha = (a *(pot(xlinha, 2)))+ (b * xlinha) + c;
+    equacaox2linhas = a *(pot(x2linhas, 2))+ b * x2linhas + c;
+    
+    escreva("Esse é o valor de equacaoxlinha ", equacaoxlinha);
+    escreva("Esse é o valor de equacaox2linhas ", equacaox2linhas);
+    
+    se (equacaoxlinha == 0 || equacaox2linhas == 0){
+        escreva("A equação é verdadeira");
+    }senão{
+        escreva("A equação não é verdadeira");
+    }
+    
+}

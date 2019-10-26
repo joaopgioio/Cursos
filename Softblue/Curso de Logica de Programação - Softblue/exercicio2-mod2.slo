@@ -1,0 +1,14 @@
+início {
+    inteiro: n1;
+    inteiro: n2;
+    inteiro: soma;
+    
+    leia("Digite o valor de n1", n1);
+    escreva("O valor digitado de n1 é ", n1);
+    leia("Digite o valor de n2", n2);
+    escreva("O valor digitado de n2 é ", n2);
+    
+    soma = n1 + n2;
+    
+    escreva("A soma de n1 " + "+ " + "n2 "+ "é " +soma);
+}

@@ -1,0 +1,12 @@
+início {
+    
+    caractere: primeironome;
+    caractere: sobrenome;
+    caractere: nomecompleto;
+    
+    leia("Digite seu primeiro nome ", primeironome);
+    leia("Digite seu sobrenome ", sobrenome);
+    
+    nomecompleto = concatene(primeironome +" ", sobrenome);
+    escreva(nomecompleto);
+}

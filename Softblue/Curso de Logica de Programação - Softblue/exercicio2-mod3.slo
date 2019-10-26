@@ -1,0 +1,13 @@
+início {
+    
+    lógico: x;
+    lógico: v;
+    //inteiro:
+    // lógico: validacao;
+    leia("Digite o valor de v ", v);
+    
+    x = 5 * 3 + rad(7*7) <= 100 ou não v e v;
+    
+    escreva("Valor de x ", x);   
+    
+}
