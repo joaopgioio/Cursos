@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191028 16:04:17.533" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Projetos\Estruturas\UsandoLoops.robot" id="s1" name="UsandoLoops">
+<test id="s1-t1" name="Caso de teste exemplo 01">
+<kw name="Usando FOR com RANGE">
+<kw type="for" name="${COUNT} IN RANGE [ 1 | 6 ]">
+<kw type="foritem" name="${COUNT} = 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.640" level="INFO">Meu contador atual é: 1. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20191028 16:04:17.640" starttime="20191028 16:04:17.640"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.641" starttime="20191028 16:04:17.640"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.641" starttime="20191028 16:04:17.639"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.641" level="INFO">Meu contador atual é: 2. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20191028 16:04:17.641" starttime="20191028 16:04:17.641"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.641" starttime="20191028 16:04:17.641"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.641" starttime="20191028 16:04:17.641"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 3">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.642" level="INFO">Meu contador atual é: 3. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20191028 16:04:17.642" starttime="20191028 16:04:17.642"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.642" starttime="20191028 16:04:17.642"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.642" starttime="20191028 16:04:17.642"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 4">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.643" level="INFO">Meu contador atual é: 4. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20191028 16:04:17.643" starttime="20191028 16:04:17.643"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.643" starttime="20191028 16:04:17.643"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.643" starttime="20191028 16:04:17.642"></status>
+</kw>
+<kw type="foritem" name="${COUNT} = 5">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Meu contador atual é: ${COUNT}. O range será de 1 a 5!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.644" level="INFO">Meu contador atual é: 5. O range será de 1 a 5!</msg>
+<status status="PASS" endtime="20191028 16:04:17.644" starttime="20191028 16:04:17.644"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${COUNT} == 5</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.644" level="INFO">Acabou o loop!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.645" starttime="20191028 16:04:17.644"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.645" starttime="20191028 16:04:17.644"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.645" starttime="20191028 16:04:17.643"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.645" starttime="20191028 16:04:17.639"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.645" starttime="20191028 16:04:17.639"></status>
+</kw>
+<kw name="Usando FOR com LISTA">
+<kw type="for" name="${ITEM} IN [ @{FRUTAS} ]">
+<kw type="foritem" name="${ITEM} = maça">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.647" level="INFO">Minha fruta é: maça</msg>
+<status status="PASS" endtime="20191028 16:04:17.647" starttime="20191028 16:04:17.647"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.647" starttime="20191028 16:04:17.647"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.647" starttime="20191028 16:04:17.646"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = banana">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.648" level="INFO">Minha fruta é: banana</msg>
+<status status="PASS" endtime="20191028 16:04:17.648" starttime="20191028 16:04:17.648"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.648" starttime="20191028 16:04:17.648"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.648" starttime="20191028 16:04:17.647"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = uva">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.649" level="INFO">Minha fruta é: uva</msg>
+<status status="PASS" endtime="20191028 16:04:17.649" starttime="20191028 16:04:17.648"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.649" starttime="20191028 16:04:17.649"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.649" starttime="20191028 16:04:17.648"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = abacaxi">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.650" level="INFO">Minha fruta é: abacaxi</msg>
+<status status="PASS" endtime="20191028 16:04:17.650" starttime="20191028 16:04:17.649"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'abacaxi'</arg>
+<arg>Log</arg>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Acabou o loop!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.651" level="INFO">Acabou o loop!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.651" starttime="20191028 16:04:17.650"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.651" starttime="20191028 16:04:17.650"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.651" starttime="20191028 16:04:17.649"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.651" starttime="20191028 16:04:17.646"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.651" starttime="20191028 16:04:17.646"></status>
+</kw>
+<kw name="Saindo de um FOR">
+<kw type="for" name="${ITEM} IN [ @{FRUTAS} ]">
+<kw type="foritem" name="${ITEM} = maça">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.654" starttime="20191028 16:04:17.653"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.654" level="INFO">Minha fruta é: maça</msg>
+<status status="PASS" endtime="20191028 16:04:17.654" starttime="20191028 16:04:17.654"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.654" starttime="20191028 16:04:17.653"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = banana">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<status status="PASS" endtime="20191028 16:04:17.654" starttime="20191028 16:04:17.654"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Minha fruta é: ${ITEM}</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.655" level="INFO">Minha fruta é: banana</msg>
+<status status="PASS" endtime="20191028 16:04:17.655" starttime="20191028 16:04:17.655"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.655" starttime="20191028 16:04:17.654"></status>
+</kw>
+<kw type="foritem" name="${ITEM} = uva">
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>'${ITEM}' == 'uva'</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.655" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20191028 16:04:17.656" starttime="20191028 16:04:17.655"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.656" starttime="20191028 16:04:17.655"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.656" starttime="20191028 16:04:17.653"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.656" starttime="20191028 16:04:17.653"></status>
+</kw>
+<kw name="Usando a Keyword REPEAT">
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>4</arg>
+<arg>Log</arg>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.657" level="INFO">Repeating keyword, round 1/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.657" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.657" starttime="20191028 16:04:17.657"></status>
+</kw>
+<msg timestamp="20191028 16:04:17.657" level="INFO">Repeating keyword, round 2/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.658" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.658" starttime="20191028 16:04:17.658"></status>
+</kw>
+<msg timestamp="20191028 16:04:17.658" level="INFO">Repeating keyword, round 3/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.659" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.659" starttime="20191028 16:04:17.659"></status>
+</kw>
+<msg timestamp="20191028 16:04:17.659" level="INFO">Repeating keyword, round 4/4.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Vamos logar essa frase 4 vezes!!!</arg>
+</arguments>
+<msg timestamp="20191028 16:04:17.659" level="INFO">Vamos logar essa frase 4 vezes!!!</msg>
+<status status="PASS" endtime="20191028 16:04:17.659" starttime="20191028 16:04:17.659"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.659" starttime="20191028 16:04:17.657"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.659" starttime="20191028 16:04:17.656"></status>
+</kw>
+<status status="PASS" endtime="20191028 16:04:17.661" critical="yes" starttime="20191028 16:04:17.637"></status>
+</test>
+<doc>Suite para exemplificar o uso de Loops nos teste
+Os Loops devem ser um pouco utilizado, mas tem hora que não tem jeito
+e precisamso dele mesmo, então vamos ver como é
+Loops: use com moderação!
+Infelizmente o Loop FOR ainda não tem uma estrutura Keyword-driven
+Mas o criador do Robot já disse que estão estudando uma solução!</doc>
+<status status="PASS" endtime="20191028 16:04:17.663" starttime="20191028 16:04:17.564"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="UsandoLoops" pass="1">UsandoLoops</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
